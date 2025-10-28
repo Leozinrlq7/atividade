@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input{
+            width: 200px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button{
+            width: 100px;
+            height: 10%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .container{
+            width: 200px;
+            height:150px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .outer-container {
+            padding: 30px;
+            background:#e5e5e5;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="outer-container">
+        <div class="content">
+            <label for="Nome">Nome:</label>
+            <input type="text" id="Nome" name="Nome" />
+
+            <label for="Idade">Idade:</label>
+            <input type="number" id="Idade" name="Idade" />
+
+            <label for="Telefone">Telefone:</label>
+            <input type="tel" id="Telefone" name="Telefone" />
+
+            <button id="btn">Registro</button>
+
+            <div class="container"></div>
+
+        </div>
+    <script>
+        const form = document.getElementById('cadastroForm');
+        const listaUsuario = document.getElementById('listaUsuario');
+
+        function carregaUsuario(){
+            const usuario = JSON.parse(localStorage.getItem('usuario')) || [];
+            listaUsuario.innerHTML = '<h3>usuario cadastra:<h30>';
+
+        if (usuario.length === 0) {
+            listaUsuario.innerHTML += '<p>Nenhum usuario cadastra.</p>';
+            return;
+
+        }
+        
+        usuario.forEach(usuario =>{
+            const div = document.createElement('div');
+            div.classList.add('usuario');
+        })
+
+        usuario.forEach(usuario =>{
+            const div = document.createElement('div');
+            div.classList.add('usuario');
+            div.innerHTML `
+            <strong>Nome:</strong> ${usuario.nome}<br>
+            <strong>Telefone:</strong> ${usuario.telefone}<br>
+            <strong>Idade:</strong> ${usuario.idade}<br>
+            `;
+            listaUsuario.appendChild(div);
+
+        });
+}
+ </script>
+</body>
+</html> 
