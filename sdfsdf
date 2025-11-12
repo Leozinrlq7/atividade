@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>novoprojeto</title>
+  </head>
+  <body class="h-screen flex bg-gray-300">
+    
+    <div class="w-full h-full bg-indigo-900 justify-between ">
+     <div class="pt-10 w-full flex justify-center bg-blue-300 h-30">
+        <p class="font-black text-gray-200 text-4xl">PREFERENCIAL</p>
+       </div>
+     
+      <div class="flex justify-between">
+       
+
+        <div class=" m-5 mt-6 w-350 h-195 bg-blue-600 rounded-2xl flex justify-center items-center">
+          <p class="font-normal text-gray-200 text-3xl">Tela Principal</p>
+        </div>
+
+        <div class=" mt-6 pt-15 w-120 h-150 bg-blue-300 rounded-3xl tracking-widest ">
+          <div class="flex justify-around pl-4">
+            <p class="font-black text-white text-4xl ">SENHA</p>
+            <p class="font-black text-white text-4xl ">GUICHÊ</p>
+          </div>
+
+          <div class="flex justify-around ">
+           
+            <div class="flex flex-col pt-10 items-center gap-5">
+              <p class="font-medium text-white text-3xl ">P002</p>
+              <p class="font-medium text-white text-3xl ">G002</p>
+              <p class="font-medium text-white text-3xl ">J002</p>
+              <p class="font-medium text-white text-3xl ">P001</p>
+              <p class="font-medium text-white text-3xl ">G001</p>
+              <p class="font-medium text-white text-3xl ">J001</p>
+            </div>
+          
+            <div class="flex flex-col pt-10 items-center gap-5">
+              <p class="font-medium text-white text-3xl">04</p>
+              <p class="font-medium text-white text-3xl">03</p>
+              <p class="font-medium text-white text-3xl">03</p>
+              <p class="font-medium text-white text-3xl">03</p>
+              <p class="font-medium text-white text-3xl">02</p>
+              <p class="font-medium text-white text-3xl">01</p>
+            </div>
+            
+          </div>
+
+          <div class="mt-40 w-120 h-40 bg-blue-500 rounded-3xl tracking-widest ">
+            <div class="flex justify-around pl-4">
+              <p class="font-black text-white text-4xl ">SENHA</p>
+              <p class="font-medium text-white text-3xl">01</p>
+
+            </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
